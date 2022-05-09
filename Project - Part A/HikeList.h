@@ -1,22 +1,51 @@
-#pragma once
-#ifndef HIKELIST_H
-#define HIKELIST_H
-using namespace std;
-#include <string>
+/*
+* Team Wizards
+*
+* Lance, Shadow
+* Delgado, Steven
+* Vu, Nhi
+* Lam, Dat
+*
+* Spring 2022
+* CS A250 - C++ 2
+* Project: Hiking in the US
+*/
 
-class Hike
-{
+#ifndef HikeList_H
+#define HikeList_H
 
-friend:
+#include <iostream>
+#include <map>
+#include <algorithm>
+#include "Hike.h"
 
-
+class HikeList {
 public:
+	HikeList(){};
 
+	void addHike(const Hike& addedHike, double hikePrice);
 
-protected:
+	void addHike(const std::string& location, const std::string& nameOfHike, int duration,
+		char difficulty, double price);
 
+	double getPrice(const std::string& hikeName) const;
+
+	void printAllLocations() const;
+	
+	void printByLocation(const std::string& location) const;
+
+	void printByDuration(int duration) const;
+
+	void printByDifficulty(char difficulty) const;
+
+	void printByPrice() const;
+
+	void printByHikeName(const std::string& hikeName) const;
+
+	void clearList();
 
 private:
-
+	std::multimap<Hike, double> hikeMultimap;
 };
-#endif
+
+#endif HikeList_H

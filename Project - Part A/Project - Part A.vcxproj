@@ -139,17 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="MemberList.h" />
-    <ClInclude Include="Member.h" />
-    <ClInclude Include="HikeList.h" />
     <ClInclude Include="Hike.h" />
+    <ClInclude Include="HikeList.h" />
+    <ClInclude Include="Member.h" />
+    <ClInclude Include="MemberList.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hike.cpp" />
     <ClCompile Include="HikeList.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="MemberList.cpp" />
-    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
