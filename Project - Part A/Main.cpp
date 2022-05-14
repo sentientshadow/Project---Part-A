@@ -13,7 +13,10 @@
 
 #include "Hike.h"
 #include "Member.h"
+#include "MemberList.h"
+#include "HikeList.h"
 #include <iostream>
+
 using namespace std;
 
 int main() {
@@ -28,7 +31,12 @@ int main() {
 	mem.setID(100);
 	mem.addPoints(25876);
 	mem.printMember();
+	
 	// Test Case: MemberList
+	MemberList listMember;
+
+	listMember.addMember("Grandma", "Gatewood", 25876);
+	listMember.printMember(111, "Gatewood");
 
 
 	return 0;

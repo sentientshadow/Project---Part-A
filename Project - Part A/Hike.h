@@ -24,6 +24,7 @@ class Hike
 public:
 	// only constructors can be defined inline, others must be in .cpp
 	Hike() : duration(0), difficulty('e') {}
+
 	Hike(const std::string& aLocation, const std::string& aHike,
 		int theDuration, char theDifficulty) :
 		location(aLocation), hike(aHike), 

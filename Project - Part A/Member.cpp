@@ -10,6 +10,7 @@
 	CS A250 - C++ 2
 	Project: Hiking in the US
 */
+
 #include "Member.h"
 #include <string>
 #include <iostream>
@@ -42,6 +43,6 @@ string Member::getLastName()
 
 void Member::printMember() const
 {
-	cout << "\t" << lastName << ", " << firstName << "\n";
+	cout << "\n\t" << lastName << ", " << firstName << "\n";
 	cout << "\tPoints available: " << points << endl;
 }

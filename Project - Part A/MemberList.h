@@ -1,3 +1,17 @@
+/*
+    Wizards Team
+
+    Lane, Shadow
+    Delgado, Steven
+    Vu, Nhi
+    Lam, Dat
+
+    Spring 2022
+    CS A250 - C++ 2
+    Project: Hiking in the US
+*/
+
+
 #ifndef MEMBERLIST_H
 #define MEMBERLIST_H
 
@@ -19,16 +33,18 @@ public:
 
     void addMember(const string&, const string&);
     void addMember(const string&, const string&, const int);
-
-    int getLastID() const;
+    int getLastID() const;      
+      
     int getPoints(const int) const;
     void printMember(int, const string&) const;
 
     void clearList();
+    
 
     ~MemberList();
 
 private:
-    std::set<Member> listOfMember;
+    
+    set<Member*> listOfMember;
 };
 #endif

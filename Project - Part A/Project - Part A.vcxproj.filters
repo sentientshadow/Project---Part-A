@@ -18,13 +18,19 @@
     <ClInclude Include="Hike.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HikeList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Member.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MemberList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HikeReader-1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HikeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reservations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,14 +41,28 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HikeList.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Member.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MemberList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HikeList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Reservations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\hikes_database-1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Resources\members_database-1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Resources\reservations_database-1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
