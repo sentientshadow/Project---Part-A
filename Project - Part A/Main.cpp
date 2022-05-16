@@ -15,16 +15,19 @@
 #include "Member.h"
 #include "MemberList.h"
 #include "HikeList.h"
+#include "HikeReader-1.h"
+#include "ReservationReader.h"
+#include "MemberReader.h"
 #include <iostream>
 
 using namespace std;
 
-int main() {
-	// Test Case: Hike Output
+int main() 
+{
+	/*Test Case : Hike Output
 	Hike test("Montana", "Glacier", 6, 's');
 	cout << test << endl;
 
-	// Test Case: HikeList
 
 	// Test Case: Member
 	Member mem("Grandma", "Gatewood");
@@ -37,6 +40,9 @@ int main() {
 
 	listMember.addMember("Grandma", "Gatewood", 25876);
 	listMember.printMember(111, "Gatewood");
+	*/
+	HikeList mainHikeList = HikeList();
+	getHikeData(mainHikeList);
 
 
 	return 0;

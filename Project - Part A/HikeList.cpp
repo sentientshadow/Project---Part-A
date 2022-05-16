@@ -1,14 +1,14 @@
 /*
-*	Team Wizards
-*	
-*	Lance, Shadow
-*	Delgado, Steven
-*	Vu, Nhi
-*	Lam, Dat
-*	
-*	Spring 2022
-*	CS A250 - C++ 2
-*	Project: Hiking in the US
+	Wizards Team
+
+	Lane, Shadow
+	Delgado, Steven
+	Vu, Nhi
+	Lam, Dat
+
+	Spring 2022
+	CS A250 - C++ 2
+	Project: Hiking in the US
 */
 
 #include <iostream>
@@ -25,8 +25,9 @@ void HikeList::addHike(const Hike& addedHike, double hikePrice)
 }
 
 
-//Creates a hike with the given paramters and adds to the list with given Price
-void HikeList::addHike(const string& location, const string& nameOfHike, int duration,
+//Creates a hike adds to the list with given Price
+void HikeList::addHike(const string& location, 
+	const string& nameOfHike, int duration,
 	char difficulty, double price)
 {
 	Hike newHike(location, nameOfHike, duration, difficulty);

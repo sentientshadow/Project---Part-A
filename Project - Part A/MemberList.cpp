@@ -22,15 +22,17 @@ MemberList::MemberList()
 }
 
 void MemberList::addMember(const string& firstName, const string& lastName)
-{	
+{
 	Member* memberInserted = new Member(firstName, lastName);
-		
-	if (listOfMember.size() == 0)
-		memberInserted->setID(STARTING_ID);
-	else
-		memberInserted->setID(getLastID() + 1);
-	
 
+	if (listOfMember.size() == 0)
+	{
+		memberInserted->setID(STARTING_ID);
+	}
+	else
+	{
+		memberInserted->setID(STARTING_ID + listOfMember.size());
+	}
 	listOfMember.insert(memberInserted);
 }
 
@@ -48,46 +50,41 @@ void MemberList::addMember(const string& firstName, const string& lastName, cons
 	{
 		memberInserted->setID(listOfMember.size() + STARTING_ID);
 	}
-		
 	listOfMember.insert(memberInserted);
 }
 
 int MemberList::getLastID() const
-{		
-	auto it = listOfMember.end();
-	--it;
-	Member* b = *it;
-
-	return b->getID();
+{
+	auto iterLastID = listOfMember.end();
+	iterLastID--;
+	return (*iterLastID)->getID();
 }
+
 
 void MemberList::printMember(const int myID, const string& myLastName) const
 {
-
-	set<Member*>::iterator it = std::find_if(listOfMember.begin(), listOfMember.end(), [=](Member* m)
+	set<Member*>::iterator it = listOfMember.begin();
+	set<Member*>::iterator itEnd = listOfMember.end();
+	auto searchID = find_if(it, itEnd, [=](Member* m)
 		{
-			return m->getID() == myID && m->getLastName() == myLastName; 
+			return (m->getID() == myID && m->getLastName() == myLastName);
 		});
-	if (it != listOfMember.end())
+	if (searchID != itEnd)
 	{
-		Member* b = *it;
-		b->printMember(); 
-		cout << "\tMembership # " << b->getID() << endl;
+		(*searchID)->printMember();
+		cout << "\tMembership # " << (*searchID)->getID() << endl;
 	}
-	
 }
 
 int MemberList::getPoints(const int myID) const
 {
-	const auto id = myID;
-	set<Member*>::iterator it = std::find_if(listOfMember.begin(), listOfMember.end(), [=](Member* m) 
+	set<Member*>::iterator iterSearchID = listOfMember.begin();
+	set<Member*>::iterator iterEnd = listOfMember.end();
+	auto seachPoints = find_if(iterSearchID, iterEnd, [=](Member* m)
 		{
-			return m->getID() == id; 
+			return (m->getID() == myID);
 		});
-
-	Member* b = *it;
-
-	return b->getPoints();
+	return (*seachPoints)->getPoints();
 }
 
 void MemberList::clearList()
@@ -99,4 +96,3 @@ MemberList::~MemberList()
 {
 	clearList();
 }
-

@@ -33,6 +33,12 @@
     <ClInclude Include="Reservations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MemberReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReservationReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hike.cpp">
@@ -55,13 +61,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Resources\hikes_database-1.txt">
+    <Text Include="hikes_database.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="Resources\members_database-1.txt">
+    <Text Include="members_database.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="Resources\reservations_database-1.txt">
+    <Text Include="reservations_database.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

@@ -144,6 +144,8 @@
     <ClInclude Include="HikeReader-1.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="MemberList.h" />
+    <ClInclude Include="MemberReader.h" />
+    <ClInclude Include="ReservationReader.h" />
     <ClInclude Include="Reservations.h" />
   </ItemGroup>
   <ItemGroup>
@@ -155,9 +157,9 @@
     <ClCompile Include="Reservations.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Resources\hikes_database-1.txt" />
-    <Text Include="Resources\members_database-1.txt" />
-    <Text Include="Resources\reservations_database-1.txt" />
+    <Text Include="hikes_database.txt" />
+    <Text Include="members_database.txt" />
+    <Text Include="reservations_database.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

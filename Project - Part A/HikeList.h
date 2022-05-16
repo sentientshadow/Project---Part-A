@@ -1,14 +1,14 @@
 /*
-*	Team Wizards
-*
-*	Lance, Shadow
-*	Delgado, Steven
-*	Vu, Nhi
-*	Lam, Dat
-*
-*	Spring 2022
-*	CS A250 - C++ 2
-*	Project: Hiking in the US
+	Wizards Team
+
+	Lane, Shadow
+	Delgado, Steven
+	Vu, Nhi
+	Lam, Dat
+
+	Spring 2022
+	CS A250 - C++ 2
+	Project: Hiking in the US
 */
 
 #ifndef HikeList_H
@@ -19,7 +19,8 @@
 #include <algorithm>
 #include "Hike.h"
 
-class HikeList {
+class HikeList 
+{
 public:
 	//Constructor
 	HikeList(){};
