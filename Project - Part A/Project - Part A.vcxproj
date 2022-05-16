@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Hike.h" />
     <ClInclude Include="HikeList.h" />
     <ClInclude Include="HikeReader-1.h" />
@@ -155,6 +156,7 @@
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="MemberList.cpp" />
     <ClCompile Include="Reservations.cpp" />
+    <ClCompile Include="Interface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="hikes_database.txt" />

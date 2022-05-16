@@ -73,9 +73,9 @@ public:
 
 	int addReservation(int memberId, std::string newHike);
 
-	void cancelReservation(int reservNumb);
+	void cancelReservation(int reservNum);
 
-	void printReservation(int reservNumb, HikeList listOfHikes,
+	void printReservation(int reservNum, HikeList listOfHikes,
 		MemberList listOfMembers);
 
 	void clearList();
@@ -83,7 +83,7 @@ public:
 	~Reservations();
 private:
 
-	Node* findReservation(int reservNumb);
+	Node* findReservation(int reservNum);
 	
 	Node* first;
 	Node* last;

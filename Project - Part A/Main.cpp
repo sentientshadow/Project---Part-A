@@ -18,6 +18,7 @@
 #include "HikeReader-1.h"
 #include "ReservationReader.h"
 #include "MemberReader.h"
+#include "Interface.h"
 #include <iostream>
 
 using namespace std;
@@ -43,6 +44,10 @@ int main()
 	*/
 	HikeList mainHikeList = HikeList();
 	getHikeData(mainHikeList);
+	MemberList mainMemberList = MemberList();
+	getMemberData(mainMemberList);
+	Reservations mainReservations = Reservations();
+	displayMenu();
 
 
 	return 0;
