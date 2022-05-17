@@ -26,7 +26,7 @@ public:
 	//Constructors
 	Node() : reservationNumber(0), memberID(0), prev(nullptr), next(nullptr){}
 
-	Node(int newReservation, int newMember, std::string newHike, 
+	Node(int newReservation, int newMember, std::string& newHike, 
 		Node* prevLink, Node* nextLink) :
 		reservationNumber(newReservation), memberID(newMember),
 			hikeName(newHike), prev(prevLink), next(nextLink) {}
@@ -71,12 +71,12 @@ public:
 	//Constructor to Default Values
 	Reservations() : first(nullptr), last(nullptr), size(0){}
 
-	int addReservation(int memberId, std::string newHike);
+	int addReservation(int memberId, std::string& newHike);
 
 	void cancelReservation(int reservNum);
 
-	void printReservation(int reservNum, HikeList listOfHikes,
-		MemberList listOfMembers);
+	void printReservation(int reservNum, HikeList& listOfHikes,
+		MemberList& listOfMembers);
 
 	void clearList();
 

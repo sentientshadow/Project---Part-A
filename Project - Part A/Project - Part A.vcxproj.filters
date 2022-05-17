@@ -24,7 +24,7 @@
     <ClInclude Include="MemberList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HikeReader-1.h">
+    <ClInclude Include="HikeReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HikeList.h">

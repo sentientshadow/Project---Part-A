@@ -16,7 +16,7 @@
 #include <iomanip>
 #include "Reservations.h"
 
-int Reservations::addReservation(int memberId, std::string hikeName)
+int Reservations::addReservation(int memberId, std::string& hikeName)
 {
 	if (size == 0) {
 		first = new Node(RESERVATION_NUMBER, memberId, hikeName, nullptr, last);
@@ -24,23 +24,25 @@ int Reservations::addReservation(int memberId, std::string hikeName)
 		size++;
 	}
 	else {
-		last->setNext(new Node(RESERVATION_NUMBER, memberId,
+		last->setNext(new Node(RESERVATION_NUMBER + size, memberId,
 			hikeName, last, nullptr));
 		last = last->getNext();
 		size++;
 	}
-	return RESERVATION_NUMBER;
+	return last->getReservationNumber();
 }
 
  void Reservations::cancelReservation(int reservNum) 
 {
-	 if (size == 0) {
+	 if (size == 0) 
+	 {
 		 delete first;
 		 first = nullptr;
 		 last = nullptr;
 		 size--;
 	}
-	 else {
+	 else 
+	 {
 		 auto canceledRes = findReservation(reservNum);
 		 canceledRes->getPrev()->setNext(canceledRes->getNext());
 		 canceledRes->getNext()->setPrev(canceledRes->getPrev());
@@ -50,8 +52,8 @@ int Reservations::addReservation(int memberId, std::string hikeName)
 	 }
 }
 
-void Reservations::printReservation(int reservNum, HikeList listOfHikes,
-	MemberList listOfMembers)
+void Reservations::printReservation(int reservNum, HikeList& listOfHikes,
+	MemberList& listOfMembers)
 {
 	auto iterRes = findReservation(reservNum);
 	listOfHikes.printByHikeName(iterRes->getHikeName());

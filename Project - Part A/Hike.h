@@ -32,7 +32,9 @@ public:
 	bool operator<(const Hike& userHike) const
 	{
 		if (userHike.location > this->location)
+		{
 			return true;
+		}
 	}
 	
 	// Getters

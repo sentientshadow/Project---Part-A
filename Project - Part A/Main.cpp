@@ -15,10 +15,11 @@
 #include "Member.h"
 #include "MemberList.h"
 #include "HikeList.h"
-#include "HikeReader-1.h"
+#include "HikeReader.h"
 #include "ReservationReader.h"
 #include "MemberReader.h"
 #include "Interface.h"
+#include "Reservations.h"
 #include <iostream>
 
 using namespace std;
@@ -47,8 +48,23 @@ int main()
 	MemberList mainMemberList = MemberList();
 	getMemberData(mainMemberList);
 	Reservations mainReservations = Reservations();
-	displayMenu();
+	
+	/*
+	mainHikeList.printAllLocations();
+	cout << "\n";
+	mainHikeList.printByDifficulty('e');
+	cout << "\n";
+	mainHikeList.printByDuration(2);
+	cout << "\n";
+	mainHikeList.printByLocation("California");
+	cout << "\n";
+	mainHikeList.printByPrice();
+	cout << "\n";
+	mainHikeList.printByHikeName("Yosemite");
+	*/
 
+	displayMenu();
+	processReservation(mainHikeList, mainMemberList, mainReservations);
 
 	return 0;
 }

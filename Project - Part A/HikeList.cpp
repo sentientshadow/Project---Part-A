@@ -59,7 +59,6 @@ void HikeList::printAllLocations() const
 			cout << "\t" << (iter->first).getLocation() << endl;
 			iter++;
 		}
-		
 	}
 }
 
@@ -76,14 +75,11 @@ void HikeList::printByLocation(const string& location) const
 		if (requestedHike != hikeMultimap.end()) {
 			cout << (requestedHike->first);
 			cout << "\t" << "  Price (per Person): $ " << fixed << setprecision(2)
-				<< this->getPrice((requestedHike->first).getHike()) << endl;
+				<< this->getPrice((requestedHike->first).getHike()) << "\n" << endl;
 			iter = ++requestedHike;
 		}
 	}
-
-	
 }
-
 
 //Prints all hikes in order of duration from lowest to highest
 void HikeList::printByDuration() const
@@ -116,7 +112,6 @@ void HikeList::printByDuration(int duration) const
 	for_each(tempMap.begin(), tempMap.end(), [](pair<int, string> hike)
 		{cout <<"\t" << "(" << hike.first << ") " << hike.second << endl; });
 }
-
 
 //Prints all hikes with the requested difficulty
 void HikeList::printByDifficulty(char difficulty) const 

@@ -1,44 +1,46 @@
 /*
-	Wizards Team
-
-	Lane, Shadow
-	Delgado, Steven
-	Vu, Nhi
-	Lam, Dat
-
-	Spring 2022
-	CS A250 - C++ 2
-	Project: Hiking in the US
-*/
+Wizards Team
+Lane, Shadow
+Delgado, Steven
+Vu, Nhi
+Lam, Dat
+Spring 2022
+CS A250 - C++ 2
+Project: Hiking in the US
+*/ 
 
 #ifndef INTERFACE_H
 #define INTERFACE_H
+
+#include "HikeList.h"
+#include "MemberList.h"
+#include "Reservations.h"
 
 #include <string>
 #include <iostream>
 
 void displayMenu();
 
-void processReservation(std::string& HikeList, int& MemberList, int& Reservations);
+void processReservation(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void chooseByLocation(std::string& HikeList, int& MemberList, int& Reservations);
+void chooseByLocation(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void chooseByDuration(std::string& HikeList, int& MemberList, int& Reservations);
+void chooseByDuration(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void chooseByDifficulty(std::string& HikeList, int& MemberList, int& Reservations);
+void chooseByDifficulty(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void chooseByPrice(std::string& HikeList, int& MemberList, int& Reservations);
+void chooseByPrice(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void askIfMember(int& MemberList);
+int askIfMember(MemberList& memberList);
 
-void addNewMember(int& MemberList);
+int addNewMember(MemberList& memberList);
 
-void makeReservation(std::string& HikeList, int& MemberList, int& Reservations);
+void makeReservation(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void viewReservation(std::string& HikeList, int& MemberList, int& Reservations);
+void viewReservation(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void cancelReservation(std::string& HikeList, int& MemberList, int& Reservations);
+void cancelReservation(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
-void askToReserve(std::string& HikeList, int& MemberList, int& Reservations);
+void askToReserve(HikeList& hikeList, MemberList& memberList, Reservations& reservations);
 
 #endif

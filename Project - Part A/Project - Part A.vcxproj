@@ -142,7 +142,7 @@
     <ClInclude Include="Interface.h" />
     <ClInclude Include="Hike.h" />
     <ClInclude Include="HikeList.h" />
-    <ClInclude Include="HikeReader-1.h" />
+    <ClInclude Include="HikeReader.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="MemberList.h" />
     <ClInclude Include="MemberReader.h" />
