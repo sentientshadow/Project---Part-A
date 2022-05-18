@@ -10,7 +10,7 @@
 	CS A250 - C++ 2
 	Project: Hiking in the US
 */
-
+ 
 #include <iostream>
 #include <iomanip>
 #include <map>
